@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1부터 10까지의 합을 출력
+        for(let i = 1; 1 <= 10; 1++ ){
+            sum = sum + i;
+            document.write(i + '<br');
+        }
+
+        //구구단 출력
+        for (let i = 1; i<= 9; i++) {
+            for (let J= 1; J<=9; J++) {
+                document.write(i + 'x' + J + '=' + i * J + '<br');
+                document.write(`${i} x ${J} '=' ${i * J} + <br>`);
+            }
+            document.write(`${i} x ${J} = ${i * J} <br>`);
+        }
+         document.write('<br>');   
+        
+
+
+         // 7의 배수 이자 8의 배수의 첫번 째 숫자는 56
+         
+         for(i = 1; 1<1000; 1++) {
+            if (i % 7 == 0 && i % 8 == 0) {
+                document.write(i);
+                break;
+            }
+         }
+         while (true) { //무한루프}
+            console.log('안녕하세요')
+         }
+
+         // 5번 뿌리기
+         let i = 0;
+         while (i < 5) {
+            document.write('안녕하세요<br>');
+            i++;
+         }
+
+         // do while 문 : 파이썬 문법 제공 안함, 반드시 한 번은 실행된다.
+         do{
+            document.write('안녕하세요<br>');
+            1++;
+
+         }while( i < 5 );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
