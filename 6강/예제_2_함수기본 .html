@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /*
+    함수 실행 순서
+    */
+
+     fun1(); // 정상 실행
+     fun2() //오류 실행
+
+     // 명시적 함수 생성
+     function fun1() {
+     console,log('fun1 run!');
+     }
+
+     // 익명 함수 생성
+     var fun2 = function() {
+         console.log('fun2 run!');
+     }
+
+     fun2(); //정상실행
+
+     document.write('<hr>');
+
+
+
+    let avg = function(x, y, z){
+            return (x + y + z) / 3;
+        }
+
+        document.write(avg(90,60,60))
+
+        function grade(avg){
+            if(avg >= 90) {
+                return '수';
+            }
+            else if(avg >= 80) {
+                return '우';
+            }
+            else if(avg >= 70) {
+                return '미';
+            }
+            else if(avg >= 60) {
+                return '양';
+            }
+            else {
+                return '가';
+            }
+        }
+
+        document.write(grade(avg(90,60,60))); // 성적은 미 입니다.
+
+
+        document.write('<hr>');
+
+        // 화살표 함수의 특징
+        // arguments 없음
+        // this 용도 다름
+        let mulFunc = (num1) => {
+            return num * 2
+        };
+
+        document.write(mulFunc(10));
+        document.write(mulFunc2(10));
+
+
+
+        
+
+        function gugudan1(n) {
+    for (let i = 1; i <= 9; i++) {
+        document.write(`${n} x ${i} = ${n * i}`);
+    }
+}
+
+
+gugudan1(2) // 명시적 함수
+
+        
+
+        const gugudan2 = function(n) {
+    for (let i = 1; i <= 9; i++) {
+        document.write(`${n} x ${i} = ${n * i}`);
+    }
+};
+
+gugudan2(2) // 익명함수
+
+       
+
+        const gugudan3 = (n) => {
+    for (let i = 1; i <= 9; i++) {
+        document.write(`${n} x ${i} = ${n * i}`);
+    }
+};
+
+gugudan3(2) // 화살표 함수
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        /* 내장함수*/
+
+        // 시간 관련 함수
+        let callback = function() {
+            alert('1초 후에 실행됨');
+        };
+
+        
+
+        setTimeout(callback, 3000);
+
+        let intervalid = setInterval(() => {
+            document.write('1초 마다 실행됨' + '<br>');
+        }, 1000);
+
+        callback = function () {
+            clearInterval(intervalid);
+            document.write('종료');
+        };
+        let timeout = setTimeout(callback, 1000 * 10);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
