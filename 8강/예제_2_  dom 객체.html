@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            window.onload = function() {
+                let tag = document.createElement('p');
+                let text = document.createTextNode('hello world');
+
+                tag.appendChild(text);
+                document.body.appendChild(tag);
+
+                document.write('<hr>');
+
+                let imgTag = document.createElement('img');
+                imgTag.src = 'img/logo.png';
+                imgTag.width = 200;
+                img.height = 200;
+            
+
+            /*innerHTML*/
+            let str = '';
+            str += '<h1>안녕하세요</h1>'
+
+            str += " <img src='./img/logo.png', ";
+            str += " width='170', height='67', tempData='logoImg'> ";
+
+            document.body.innerHTML = str;
+            document.body.innerHTML = '<p id = "hello">안녕하세요</p> <p class="hello2">gello world</p>';
+
+                
+
+            /* 선택자 : # id, . class */
+
+            let pTag = document.getElementById('hello');
+            console.log(pTag);
+            
+pTag.style.color = 'red';
+pTag.style.fnontsize = '30px';
+pTag.innerHTML = '홍길동 입니다.';
+
+
+let pTag2 = document.getElementsByClassName('hello2');
+console.log(pTag2);
+pTag2[0].style.color = 'blue';
+pTag2[0].style.fnontsize = '30px';
+pTag2[0].innerHTML = '홍길동 입니다.';
+
+
+
+/* 쿼리 실렉터 */
+
+
+let selected = document.querySelector('hello');
+console.log(selected);
+selected.style.color = red;
+selected.style.fnontsize = '20px';
+selected.innerHTML = '홍길동입니다.';
+
+selected = document.querySelector('.hello2');
+console.log(selected);
+
+
+
+/* 객체 삭제 */
+
+let tag1 = "";
+                tag1 += "<p id='jsTitle'> javascript & node.js </p>";
+                tag1 += "<img id='logoImg', src='./img/logo.png',";
+                tag1 += "width='170', height='67', tempData='logoImg'>";
+
+                document.body.innerHTML = tag1;
+                let jsTitle = document.querySelector('#jsTitle');
+                //jsTitle.parentNode.removeChild(jsTitle);
+                jsTitle.parentNode.removeChild(jsTitle);
+
+                let logoImg = document.querySelector('#logoImg');
+                //logoImg.parentNode.removeChild(logoImg);
+                logoImg.parentNode.remobeChild(logoImg);
+                
+
+
+
+
+
+
+            };
+        </script>
+    </head>
+    <body>
+        <p id = "hello">안녕하세요</p>
+        <p class="hello2">gello world</p>
+    </body>
+    <script>
+        
+    </script>
+</html>
