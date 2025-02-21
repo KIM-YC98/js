@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+
+        $(function() {
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10',
+                success: function(response) {
+                    $(response.contacts).each(function(index, item) {
+                        $('#member').append(
+                            '<tr>' +
+                                '<td>' + item.no + '</td>' +
+                                '<td>' + item.name + '</td>' +
+                                '<td>' + item.tel + '</td>' +
+                                '<td>' + item.address + '</td>' +
+                                '<td>' +  '<img src="' + item.photo + '" alt="사진" width="100">' + '</td>' +
+                                '<td>' + '<button class="btnDelete">삭제</button>' + '</td>' +
+                            '</tr>'
+                        );
+                    });
+                },
+                
+                error: function(error) {
+                    console.log(error);
+                },
+            });
+            
+        
+                
+        });
+        
+    </script>
+
+</head>
+<body>
+
+    <table id="member" border="1">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>주소</th>
+            <th>사진</th>
+            <th>삭제</th>
+        </tr>
+    </table>
+</body>
+</html>

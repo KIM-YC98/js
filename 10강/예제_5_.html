@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script>
+       $(function () {
+        $('p').each(function (index,item) {
+            console.log(index + ' : ' + $(item).text());
+        });
+
+       
+       
+       $('#htmlMethod').html(
+                    '<strong>new</strong> ' + $('#textMethod').html()
+                );
+
+
+        //addclass() 클래스 속성 추가
+        $('#addClass').addClass('addCla');
+
+
+        $(document).ready(function () {
+                $('#eDiv').dblclick(function () {
+                    console.log('dblclick event!');
+                });
+
+                $('#eDiv').mousedown(function () {
+                    console.log('mousedown event!');
+                });
+
+                $('#eDiv').mouseup(function () {
+                    console.log('mouseup event!');
+                });
+
+                $('#eDiv').mousemove(function () {
+                    console.log('mousemove event!');
+                });
+
+                $('#eDiv').mouseover(function () {
+                    console.log('mouseover event!');
+                });
+
+                $('#eDiv').mouseout(function () {
+                    console.log('mouseout event!');
+                });
+
+                $('#eDiv').mouseenter(function () {
+                    console.log('mouseenter event!');
+                });
+
+                $('#eDiv').mouseleave(function () {
+                    console.log('mouseleave event!');
+                });
+            });
+        
+    });
+    $($('#eDiv')).click(function () {
+                //alert('로고를 클릭하셨습니다.');
+            
+                $("#eDiv").clone().appendTo($('body'));
+           });
+    
+     
+    </script>
+</head>
+<body>
+    <p> Hello javascript! </p>
+        <p> Hello jQuery! </p>
+        <p> Hello node.js! </p>
+
+        <div id="htmlMethod"> html() 메서드 </div>
+        <div id="textMethod"> text() 메서드 </div>
+
+        <div id="addClass"> addClass() 메서드 </div>
+        <div id="removeClass" class="remCla"> removeClass() 메서드 </div>
+
+        <div id="attrMethod">
+            <img>
+            <br>
+            <img>
+        </div>
+
+        <div id="cssMethod"> CSS METHOD </div>
+
+        <div id="removeMthod"> Remove Object! </div>
+        <div id="emptyMthod"> Empty Object! </div>
+        <div>
+            <img class="logo" src="img/logo.png">
+        </div>
+
+        
+<style>
+            #eDiv {
+                width:100px; height: 100px;
+                background: #ff0000;
+                line-height: 100px;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bolder;
+                margin: 20px;
+            }
+            
+        </style>
+<script>
+    $(function () {
+
+        function enventHandler() {
+            console.log('클릭 이벤트가 발생했습니다.');
+            console.log(this)
+        }
+
+        $('#objDiv').click(enventHandler);
+        $('#objPar').click(enventHandler);
+
+    });
+</script>
+</head>
+<body>
+<div id="objDiv"> 안녕하세요 </div>
+<p id="objPar"> 피 태그입니다. </p>
+
+</body>
+</body>
+</html>
