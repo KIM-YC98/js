@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script>
+       $(document).ready(function(){
+        
+        let wrap = $('#wrap');
+        let divobj = $('<div> 안녕 제이쿼리!!</div>');
+        divobj.appendTo(wrap);
+        divobj.css('background', 'green');
+            
+        $('<div> 안녕 제이쿼리!!</div>')
+            .appendTo(wrap)
+            .css('background', 'yellow');
+
+
+       });
+
+       $(function () {
+        let wrap = $('#wrap');
+        /* 객체 생성*/
+        let divobj = $("<div> Hello jQuery! </div>");
+
+        /* 객체 집어 넣기 */
+        divobj.appendTo(wrap);
+
+        // 부모 객체 자식 집어넣기
+        wrap.append(divobj);
+        
+
+
+       })
+    </script>
+</head>
+<body>
+    <div id ="wrap"></div>
+</body>
+</html>
